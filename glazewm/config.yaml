@@ -137,14 +137,23 @@ bar:
 
 workspaces:
   - name: "1"
+    bind_to_monitor: 2
   - name: "2"
+    bind_to_monitor: 1
   - name: "3"
+    bind_to_monitor: 2
   - name: "4"
+    bind_to_monitor: 2
   - name: "5"
+    bind_to_monitor: 2
   - name: "6"
+    bind_to_monitor: 2
   - name: "7"
+    bind_to_monitor: 2
   - name: "8"
+    bind_to_monitor: 2
   - name: "9"
+    bind_to_monitor: 2
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
@@ -169,6 +178,9 @@ window_rules:
   # My stuff
   - command: "set floating"
     match_process_name: "explorer"
+
+  - command: "set floating"
+    match_process_name: "ApplicationFrameHost"
 
   - command: "move to workspace 1"
     match_process_name: "firefox|chrome"
